@@ -5,6 +5,14 @@ A collection of free professional calculators and reference tools for tradespeop
 
 ---
 
+# Text Style Guide
+Don't use "not this, but that" sentence structure.
+Also do not use "not this. that" much. Like "It doesn't do this. It does that."
+Don't use em dashes.
+Don't use polysyndeton.
+Don't use anaphora.
+Always remember conjunctions like "and" where appropriate. So this sentence would not be appropriate: "It's messy, inconsistent, full of exceptions that make no sense." because it lacks an "and" before "full".
+
 ## Architecture
 
 - Every tool is a single HTML file with all CSS and JS embedded inline.

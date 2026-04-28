@@ -585,7 +585,7 @@
       </div>
 
       <div class="results-meta">
-        <span id="result-count">&mdash;</span>
+        <span id="result-count"></span>
         <span id="sort-status">Sorted by Grade &uarr;</span>
       </div>
 
@@ -628,10 +628,10 @@
     <section class="content-section">
       <h2>How to use this guide</h2>
       <p>
-        This table compiles published heat treatment ranges for the most commonly specified carbon, alloy, tool, and stainless steel grades. Use the search box to find a grade by number (for example, <span class="data">4140</span>), by category (<span class="data">tool</span>), or by a keyword in the notes column (<span class="data">bearing</span>, <span class="data">case harden</span>). The category filter buttons narrow the list to a single family. Click any column header to sort &mdash; click again to reverse the sort direction.
+        This table compiles published heat treatment ranges for the most commonly specified carbon, alloy, tool, and stainless steel grades. Use the search box to find a grade by number (for example, <span class="data">4140</span>), by category (<span class="data">tool</span>), or by a keyword in the notes column (<span class="data">bearing</span> or <span class="data">case harden</span>). The category filter buttons narrow the list to a single family. Click any column header to sort, then click it again to reverse the sort direction.
       </p>
       <p>
-        The values shown are typical ranges drawn from <em>ASM Handbook Volume 4: Heat Treating</em>, AISI/SAE specifications, and tool steel manufacturer datasheets (Crucible Industries, Bohler-Uddeholm, Carpenter Technology). They represent the <strong>starting point</strong> for a heat treat recipe, not a finished one. Section thickness, furnace atmosphere, prior microstructure, and the specific hardness target you are aiming for all change the optimal temperatures and times for your part.
+        The values shown are typical ranges drawn from <em>ASM Handbook Volume 4: Heat Treating</em>, AISI/SAE specifications, and tool steel manufacturer datasheets (Crucible Industries, Bohler-Uddeholm, and Carpenter Technology). They represent the <strong>starting point</strong> for a heat treat recipe and should not be treated as a finished one. Section thickness, furnace atmosphere, prior microstructure, and the specific hardness target you are aiming for all change the optimal temperatures and times for your part.
       </p>
       <div class="callout">
         <strong>Always verify</strong> the recipe against the steel mill certificate or the manufacturer's published datasheet for the heat you actually have. Two heats of nominally the same grade can respond differently if their carbon or alloy content sits at opposite ends of the specification.
@@ -648,35 +648,35 @@
 
       <h3>Annealing</h3>
       <p>
-        Full annealing heats the steel above its upper critical temperature, then cools it slowly in the furnace (typically 25&ndash;50&deg;F per hour through the transformation range) to produce coarse, soft pearlite. The goal is the lowest practical hardness and the most ductile, machinable, and formable structure the alloy can be put into. Some grades &mdash; especially high-carbon and high-alloy steels &mdash; respond better to <em>spheroidize annealing</em>, which holds just below the lower critical for many hours so the carbides ball up into discrete particles. Bearing steel <span class="data">52100</span> is almost always supplied spheroidize-annealed for this reason.
+        Full annealing heats the steel above its upper critical temperature, then cools it slowly in the furnace (typically 25&ndash;50&deg;F per hour through the transformation range) to produce coarse, soft pearlite. The goal is the lowest practical hardness and the most ductile, machinable, and formable structure the alloy can be put into. Some grades, especially high-carbon and high-alloy steels, respond better to <em>spheroidize annealing</em>, which holds just below the lower critical for many hours so the carbides ball up into discrete particles. Bearing steel <span class="data">52100</span> is almost always supplied spheroidize-annealed for this reason.
       </p>
 
       <h3>Hardening (austenitize and quench)</h3>
       <p>
-        Hardening heats the steel into the austenite region, holds long enough to dissolve the desired amount of carbon and alloy into solution, and then quenches fast enough to suppress diffusion-controlled transformations (pearlite, bainite) and form martensite. The required cooling rate is set by hardenability &mdash; a function of carbon content, alloy content, and grain size. Per <em>ASM Handbook Vol 4</em>, plain carbon steels need a water or brine quench to make martensite in anything but a thin section, while medium-alloy grades like <span class="data">4140</span> and <span class="data">4340</span> harden through in oil, and high-alloy tool steels like <span class="data">A2</span>, <span class="data">D2</span>, and <span class="data">H13</span> harden in still air for sections up to several inches.
+        Hardening heats the steel into the austenite region, holds long enough to dissolve the desired amount of carbon and alloy into solution, and then quenches fast enough to suppress diffusion-controlled transformations (pearlite or bainite) and form martensite. The required cooling rate is set by hardenability, which is itself a function of carbon content, alloy content, and grain size. Per <em>ASM Handbook Vol 4</em>, plain carbon steels need a water or brine quench to make martensite in anything but a thin section, while medium-alloy grades like <span class="data">4140</span> and <span class="data">4340</span> harden through in oil, and high-alloy tool steels like <span class="data">A2</span>, <span class="data">D2</span>, and <span class="data">H13</span> harden in still air for sections up to several inches.
       </p>
 
       <h3>Tempering</h3>
       <p>
-        As-quenched martensite is brittle and contains residual stresses; tempering trades a measured amount of hardness for toughness and dimensional stability. For most structural and tool steels, parts should be transferred from the quench to the tempering furnace before they reach room temperature (typically when they are still warm to the hand, around 150&ndash;200&deg;F) to avoid quench cracking. Choose the tempering temperature based on the final hardness or service condition you want, not by tradition. Higher tempering temperature means lower hardness and higher toughness. Many tool steels require <strong>multiple tempers</strong> &mdash; H13, M2, and the 440-series stainless among them &mdash; because retained austenite transforms to fresh martensite during the first temper and must itself be tempered.
+        As-quenched martensite is brittle and contains residual stresses; tempering trades a measured amount of hardness for toughness and dimensional stability. For most structural and tool steels, parts should be transferred from the quench to the tempering furnace before they reach room temperature (typically when they are still warm to the hand, around 150&ndash;200&deg;F) to avoid quench cracking. Choose the tempering temperature by the final hardness or service condition you want rather than by tradition. Higher tempering temperature means lower hardness and higher toughness. Many tool steels require <strong>multiple tempers</strong> (including H13, M2, and the 440-series stainless), because retained austenite transforms to fresh martensite during the first temper and must itself be tempered.
       </p>
     </section>
 
     <section class="content-section">
       <h2>Quench medium selection</h2>
       <p>
-        The quench medium controls the cooling rate at the part surface. Picking the wrong medium is one of the most common and most expensive heat-treat mistakes &mdash; quench too slow and you miss the hardness target; quench too fast and you crack the part or distort it past usable tolerance.
+        The quench medium controls the cooling rate at the part surface. Picking the wrong medium is one of the most common and most expensive heat-treat mistakes: too slow and you miss the hardness target, too fast and you crack the part or distort it past usable tolerance.
       </p>
       <ul>
-        <li><strong>Brine (~10% salt water):</strong> The fastest practical quench. Reserved for very shallow-hardening grades like <span class="data">W1</span>, <span class="data">W2</span>, and plain carbon steels in thin sections. Too aggressive for anything with appreciable alloy content.</li>
-        <li><strong>Water:</strong> Used for shallow-hardening carbon steels (<span class="data">1018</span>, <span class="data">1045</span>, <span class="data">1095</span>) and some carburized cases. High distortion and crack risk on complex shapes.</li>
+        <li><strong>Brine (~10% salt water):</strong> The fastest practical quench. Reserved for very shallow-hardening grades like <span class="data">W1</span> and <span class="data">W2</span>, along with plain carbon steels in thin sections. Too aggressive for anything with appreciable alloy content.</li>
+        <li><strong>Water:</strong> Used for shallow-hardening carbon steels (<span class="data">1018</span>, <span class="data">1045</span>, and <span class="data">1095</span>) and some carburized cases. High distortion and crack risk on complex shapes.</li>
         <li><strong>Polymer (PAG, etc.):</strong> Adjustable cooling rate between water and oil by changing concentration. Common in production heat treating where the supplier wants one tank to cover several alloys.</li>
-        <li><strong>Oil:</strong> The most common quench for medium-carbon alloy steels (<span class="data">4140</span>, <span class="data">4340</span>, <span class="data">8620</span> case), oil-hardening tool steels (<span class="data">O1</span>, <span class="data">O2</span>, <span class="data">L6</span>), and many martensitic stainless steels. Fast oils cool faster than slow oils &mdash; check the supplier's GM Quenchometer rating.</li>
-        <li><strong>Air (still or fan):</strong> Air-hardening tool steels (<span class="data">A2</span>, <span class="data">D2</span>, <span class="data">H13</span>, <span class="data">S7</span>) develop full hardness with no liquid quench. Distortion is minimal; section size limits are large.</li>
+        <li><strong>Oil:</strong> The most common quench for medium-carbon alloy steels (<span class="data">4140</span>, <span class="data">4340</span>, and <span class="data">8620</span> case), oil-hardening tool steels (<span class="data">O1</span>, <span class="data">O2</span>, and <span class="data">L6</span>), and many martensitic stainless steels. Fast oils cool faster than slow oils, so check the supplier's GM Quenchometer rating.</li>
+        <li><strong>Air (still or fan):</strong> Air-hardening tool steels (<span class="data">A2</span>, <span class="data">D2</span>, <span class="data">H13</span>, and <span class="data">S7</span>) develop full hardness with no liquid quench. Distortion is minimal; section size limits are large.</li>
         <li><strong>Vacuum / inert gas:</strong> High-pressure nitrogen or helium in a vacuum furnace. Produces clean parts with no scale and quench rates from slow (1 bar) to oil-equivalent (10&ndash;20 bar). The default for tooling and aerospace work.</li>
       </ul>
       <p>
-        Note that <em>which</em> medium is appropriate is a property of the steel grade and the section size, not a matter of preference. Quenching a water-hardening grade like W1 in oil leaves you below the M50 line and the part comes out soft. Quenching an oil-hardening grade like O1 in water cracks it, often catastrophically.
+        Note that <em>which</em> medium is appropriate is a property of the steel grade and the section size rather than a matter of preference. Quenching a water-hardening grade like W1 in oil leaves you below the M50 line and the part comes out soft. Quenching an oil-hardening grade like O1 in water cracks it, often catastrophically.
       </p>
     </section>
 
@@ -685,12 +685,12 @@
 
       <h3>Section thickness and ruling section</h3>
       <p>
-        The hardenability of a grade is reported for a specific bar diameter (the &ldquo;ruling section&rdquo; in the spec). A 1/2-inch round of 4140 oil-quenches to full hardness through the cross-section; a 4-inch round of the same grade does not &mdash; the core cools too slowly to make martensite and ends up with a softer bainitic or pearlitic core under a hardened skin. For sections beyond the published hardenability of a grade, either step up to a deeper-hardening alloy (4340 instead of 4140, for example) or accept a lower core hardness.
+        The hardenability of a grade is reported for a specific bar diameter (the &ldquo;ruling section&rdquo; in the spec). A 1/2-inch round of 4140 oil-quenches to full hardness through the cross-section; a 4-inch round of the same grade does not, because the core cools too slowly to make martensite and ends up with a softer bainitic or pearlitic core under a hardened skin. For sections beyond the published hardenability of a grade, either step up to a deeper-hardening alloy (4340 instead of 4140, for example) or accept a lower core hardness.
       </p>
 
       <h3>Soak time</h3>
       <p>
-        A common rule of thumb is <strong>1 hour per inch of cross-section</strong> at the austenitizing temperature, with a minimum of about 30 minutes once the part has reached temperature throughout. Tool steels with high carbide content (D2, M2, the CPM grades) may require longer soaks to dissolve enough carbide into solution; the manufacturer's datasheet is authoritative. Don't confuse <em>furnace recovery time</em> (time for the chamber to return to setpoint after loading) with <em>soak time</em> (time the part itself is at temperature). Use a thermocouple in or on a load piece if you can.
+        A common rule of thumb is <strong>1 hour per inch of cross-section</strong> at the austenitizing temperature, with a minimum of about 30 minutes once the part has reached temperature throughout. Tool steels with high carbide content (D2, M2, and the CPM grades) may require longer soaks to dissolve enough carbide into solution; the manufacturer's datasheet is authoritative. Don't confuse <em>furnace recovery time</em> (time for the chamber to return to setpoint after loading) with <em>soak time</em> (time the part itself is at temperature). Use a thermocouple in or on a load piece if you can.
       </p>
 
       <h3>Furnace atmosphere</h3>
@@ -710,15 +710,15 @@
       <details>
         <summary>What's the difference between normalizing and annealing?</summary>
         <div class="faq-body">
-          <p>Both processes heat the steel above its upper critical temperature, but the cooling step differs. Normalizing cools in still air, producing fine pearlite and a moderate increase in strength and hardness over the as-rolled condition. Annealing cools slowly in the furnace, producing coarse pearlite (or, in spheroidize annealing, balled-up carbides) and the lowest hardness the alloy is capable of.</p>
-          <p>Practically: normalize when you want a uniform, refined starting structure for further machining or heat treatment. Anneal when you need the part as soft and ductile as possible &mdash; for cold forming, deep machining, or to recover a part that has been case-hardened or work-hardened.</p>
+          <p>Both processes heat the steel above its upper critical temperature, although the cooling step differs. Normalizing cools in still air, producing fine pearlite and a moderate increase in strength and hardness over the as-rolled condition. Annealing cools slowly in the furnace, producing coarse pearlite (or, in spheroidize annealing, balled-up carbides) and the lowest hardness the alloy is capable of.</p>
+          <p>Practically: normalize when you want a uniform, refined starting structure for further machining or heat treatment. Anneal when you need the part as soft and ductile as possible, such as for cold forming, deep machining, or recovering a part that has been case-hardened or work-hardened.</p>
         </div>
       </details>
 
       <details>
         <summary>How do I pick a tempering temperature?</summary>
         <div class="faq-body">
-          <p>Pick by the final hardness or service condition you need, then verify against the manufacturer's tempering chart for that exact grade. Higher temper temperature gives lower hardness and higher toughness; the tradeoff is non-linear and grade-specific. For most medium-carbon alloy steels (4140, 4340, 8640) a useful first cut is: 400&ndash;500&deg;F for maximum hardness with some toughness recovery, 700&ndash;900&deg;F for a balance of strength and toughness, and 1000&ndash;1200&deg;F when you need yield strength below ~150 ksi with high impact resistance.</p>
+          <p>Pick by the final hardness or service condition you need, then verify against the manufacturer's tempering chart for that exact grade. Higher temper temperature gives lower hardness and higher toughness; the tradeoff is non-linear and grade-specific. For most medium-carbon alloy steels (4140, 4340, and 8640) a useful first cut is: 400&ndash;500&deg;F for maximum hardness with some toughness recovery, 700&ndash;900&deg;F for a balance of strength and toughness, and 1000&ndash;1200&deg;F when you need yield strength below ~150 ksi with high impact resistance.</p>
           <p>Be aware of <strong>tempered martensite embrittlement</strong> (TME, around 500&ndash;700&deg;F in many alloy steels) and <strong>temper embrittlement</strong> (around 700&ndash;1100&deg;F with slow cool-down in chromium-bearing steels). Avoid tempering in those windows for parts that see impact.</p>
         </div>
       </details>
@@ -726,14 +726,14 @@
       <details>
         <summary>What's the recommended hold time at temperature?</summary>
         <div class="faq-body">
-          <p>The widely cited rule is <strong>one hour per inch of section thickness</strong> at the austenitizing temperature, with a minimum of ~30 minutes after the part reaches temperature. Tempering is typically held at temperature for at least 1&ndash;2 hours per cycle, and for tool steels the temper is often repeated 2&ndash;3 times for stability. Highly alloyed grades with stable carbides &mdash; D2, M2, CPM-3V, CPM-10V &mdash; may need longer austenitizing soaks (30&ndash;60 minutes at temperature) to dissolve enough carbide into solution. Always defer to the steel supplier's published datasheet for tool steels and PH stainless grades.</p>
+          <p>The widely cited rule is <strong>one hour per inch of section thickness</strong> at the austenitizing temperature, with a minimum of ~30 minutes after the part reaches temperature. Tempering is typically held at temperature for at least 1&ndash;2 hours per cycle, and for tool steels the temper is often repeated 2&ndash;3 times for stability. Highly alloyed grades with stable carbides (such as D2, M2, CPM-3V, and CPM-10V) may need longer austenitizing soaks of 30&ndash;60 minutes at temperature to dissolve enough carbide into solution. Always defer to the steel supplier's published datasheet for tool steels and PH stainless grades.</p>
         </div>
       </details>
 
       <details>
         <summary>How do I convert these temperatures to Celsius?</summary>
         <div class="faq-body">
-          <p>The exact formula is <span class="data">&deg;C = (&deg;F &minus; 32) &times; 5/9</span>. Useful round numbers for heat treating: 1000&deg;F &asymp; 538&deg;C, 1500&deg;F &asymp; 816&deg;C, 1750&deg;F &asymp; 954&deg;C, 1850&deg;F &asymp; 1010&deg;C, 2000&deg;F &asymp; 1093&deg;C. A 50&deg;F differential equals about 28&deg;C, so a tempering range like 400&ndash;500&deg;F maps to roughly 205&ndash;260&deg;C.</p>
+          <p>The exact formula is <span class="data">&deg;C = (&deg;F &minus; 32) &times; 5/9</span>. Useful round numbers for heat treating: 1000&deg;F &asymp; 538&deg;C, 1500&deg;F &asymp; 816&deg;C, 1750&deg;F &asymp; 954&deg;C, 1850&deg;F &asymp; 1010&deg;C, and 2000&deg;F &asymp; 1093&deg;C. A 50&deg;F differential equals about 28&deg;C, so a tempering range like 400&ndash;500&deg;F maps to roughly 205&ndash;260&deg;C.</p>
         </div>
       </details>
 
@@ -748,7 +748,7 @@
       <details>
         <summary>Can stainless steels be hardened by quenching?</summary>
         <div class="faq-body">
-          <p>It depends on the family. Austenitic stainless (300-series like 304, 316) cannot be hardened by quenching &mdash; it is hardened only by cold work. The "anneal" temperatures shown for these grades are <em>solution anneal</em> values, where the steel is heated to dissolve precipitated carbides and then quenched fast enough to prevent re-precipitation (a softening operation, not a hardening one). Ferritic stainless (430, 446) similarly does not harden by quenching. Martensitic grades (410, 416, 420, 440-series) and precipitation-hardening grades (17-4 PH, 15-5 PH, 17-7 PH) do harden through heat treatment, although by very different mechanisms &mdash; martensite formation for the 4-series, and aging precipitates for the PH grades.</p>
+          <p>It depends on the family. Austenitic stainless (300-series like 304 and 316) cannot be hardened by quenching, because it is hardened only by cold work. The "anneal" temperatures shown for these grades are <em>solution anneal</em> values, where the steel is heated to dissolve precipitated carbides and then quenched fast enough to prevent re-precipitation (a softening operation rather than a hardening one). Ferritic stainless (430 and 446) similarly does not harden by quenching. Martensitic grades (410, 416, 420, and the 440-series) and precipitation-hardening grades (17-4 PH, 15-5 PH, and 17-7 PH) do harden through heat treatment, although by very different mechanisms: martensite formation for the 4-series, and aging precipitates for the PH grades.</p>
         </div>
       </details>
 
@@ -762,7 +762,7 @@
       <details>
         <summary>Why are some tool steels tempered three times?</summary>
         <div class="faq-body">
-          <p>High-alloy tool steels &mdash; especially the high-speed steels (M2, M4, T1) and air-hardening grades like H13 &mdash; retain a significant fraction of austenite after quenching. The first temper transforms much of that retained austenite into fresh, untempered martensite, which is itself brittle. The second temper tempers that new martensite. A third temper provides additional dimensional stability and converts any small remaining pockets of retained austenite. For service-critical tooling, three tempers at the recommended temperature, with full cool to room temperature between cycles, is standard practice.</p>
+          <p>High-alloy tool steels (especially the high-speed steels like M2, M4, and T1, along with air-hardening grades like H13) retain a significant fraction of austenite after quenching. The first temper transforms much of that retained austenite into fresh, untempered martensite, which is itself brittle. The second temper then tempers that new martensite. A third temper provides additional dimensional stability and converts any small remaining pockets of retained austenite. For service-critical tooling, three tempers at the recommended temperature, with full cool to room temperature between cycles, is standard practice.</p>
         </div>
       </details>
     </section>
@@ -818,15 +818,15 @@
       { grade: "1030",  category: "Carbon",    normalize: "1600-1700", anneal: "1525-1575", harden: "1500-1575", temper: "350-1100",  quench: "Water",      notes: "Medium-carbon for shafts and studs." },
       { grade: "1040",  category: "Carbon",    normalize: "1600-1700", anneal: "1450-1500", harden: "1500-1550", temper: "350-1100",  quench: "Water/Oil", notes: "Through-hardens in thin sections." },
       { grade: "1045",  category: "Carbon",    normalize: "1600-1650", anneal: "1450-1500", harden: "1475-1550", temper: "350-1200",  quench: "Water/Oil", notes: "Common shaft and gear stock." },
-      { grade: "1050",  category: "Carbon",    normalize: "1600-1650", anneal: "1450-1500", harden: "1475-1525", temper: "350-1200",  quench: "Water/Oil", notes: "Wear surfaces, axles." },
-      { grade: "1060",  category: "Carbon",    normalize: "1550-1650", anneal: "1425-1475", harden: "1450-1500", temper: "350-1200",  quench: "Oil",        notes: "Springs, knives, hand tools." },
+      { grade: "1050",  category: "Carbon",    normalize: "1600-1650", anneal: "1450-1500", harden: "1475-1525", temper: "350-1200",  quench: "Water/Oil", notes: "Wear surfaces and axles." },
+      { grade: "1060",  category: "Carbon",    normalize: "1550-1650", anneal: "1425-1475", harden: "1450-1500", temper: "350-1200",  quench: "Oil",        notes: "Springs, knives, and hand tools." },
       { grade: "1070",  category: "Carbon",    normalize: "1525-1600", anneal: "1425-1475", harden: "1450-1500", temper: "350-1100",  quench: "Oil",        notes: "Spring steel." },
-      { grade: "1080",  category: "Carbon",    normalize: "1500-1600", anneal: "1400-1450", harden: "1425-1475", temper: "350-1100",  quench: "Oil",        notes: "Music wire, knife steel." },
+      { grade: "1080",  category: "Carbon",    normalize: "1500-1600", anneal: "1400-1450", harden: "1425-1475", temper: "350-1100",  quench: "Oil",        notes: "Music wire and knife steel." },
       { grade: "1084",  category: "Carbon",    normalize: "1500-1600", anneal: "1400-1450", harden: "1475-1500", temper: "350-450",   quench: "Oil",        notes: "Popular knife steel, simple to heat treat." },
       { grade: "1090",  category: "Carbon",    normalize: "1500-1600", anneal: "1400-1450", harden: "1450-1500", temper: "350-450",   quench: "Oil",        notes: "High-carbon, wear-resistant." },
-      { grade: "1095",  category: "Carbon",    normalize: "1450-1600", anneal: "1400-1450", harden: "1450-1500", temper: "350-1100",  quench: "Oil/Water", notes: "Knives, springs; can warp in water." },
+      { grade: "1095",  category: "Carbon",    normalize: "1450-1600", anneal: "1400-1450", harden: "1450-1500", temper: "350-1100",  quench: "Oil/Water", notes: "Knives and springs; can warp in water." },
       { grade: "1117",  category: "Carbon",    normalize: "1650-1700", anneal: "1525-1575", harden: "1525-1575", temper: "300-450",   quench: "Water",      notes: "Resulfurized, free-machining; case hardened." },
-      { grade: "12L14", category: "Carbon",    normalize: "1650-1700", anneal: "—",          harden: "—",         temper: "—",          quench: "—",          notes: "Free-machining (Pb), not heat-treated for hardness." },
+      { grade: "12L14", category: "Carbon",    normalize: "1650-1700", anneal: "N/A",          harden: "N/A",         temper: "N/A",          quench: "N/A",          notes: "Free-machining (Pb), not heat-treated for hardness." },
       { grade: "1144",  category: "Carbon",    normalize: "1600-1650", anneal: "1450-1500", harden: "1475-1550", temper: "400-1200",  quench: "Oil",        notes: "Resulfurized medium-carbon, through-hardens." },
 
       // ===== Alloy steels =====
@@ -839,66 +839,66 @@
       { grade: "4615",  category: "Alloy",     normalize: "1650-1700", anneal: "1525-1575", harden: "1450-1500", temper: "300-450",   quench: "Oil",        notes: "Ni-Mo carburizing grade." },
       { grade: "4620",  category: "Alloy",     normalize: "1650-1700", anneal: "1525-1575", harden: "1450-1500", temper: "300-450",   quench: "Oil",        notes: "Ni-Mo case-hardening." },
       { grade: "5140",  category: "Alloy",     normalize: "1600-1700", anneal: "1475-1525", harden: "1500-1550", temper: "400-1200",  quench: "Oil",        notes: "Cr alloy, gears and pinions." },
-      { grade: "5160",  category: "Alloy",     normalize: "1600-1650", anneal: "1450-1500", harden: "1525-1550", temper: "400-1200",  quench: "Oil",        notes: "Spring steel, swords, leaf springs." },
+      { grade: "5160",  category: "Alloy",     normalize: "1600-1650", anneal: "1450-1500", harden: "1525-1550", temper: "400-1200",  quench: "Oil",        notes: "Spring steel, swords, and leaf springs." },
       { grade: "6150",  category: "Alloy",     normalize: "1600-1650", anneal: "1500-1550", harden: "1550-1625", temper: "700-1100",  quench: "Oil",        notes: "Cr-V spring and tool steel." },
       { grade: "8620",  category: "Alloy",     normalize: "1650-1700", anneal: "1550-1600", harden: "1550-1600", temper: "300-400",   quench: "Oil",        notes: "Ni-Cr-Mo carburizing grade for gears." },
       { grade: "8640",  category: "Alloy",     normalize: "1600-1700", anneal: "1450-1500", harden: "1500-1575", temper: "400-1200",  quench: "Oil",        notes: "Through-hardening triple alloy." },
-      { grade: "9260",  category: "Alloy",     normalize: "1650",        anneal: "1425-1475", harden: "1525-1575", temper: "400-1200",  quench: "Oil",        notes: "Si-Mn spring steel, swords." },
+      { grade: "9260",  category: "Alloy",     normalize: "1650",        anneal: "1425-1475", harden: "1525-1575", temper: "400-1200",  quench: "Oil",        notes: "Si-Mn spring steel and swords." },
       { grade: "9310",  category: "Alloy",     normalize: "1650-1700", anneal: "1100-1200", harden: "1450-1500", temper: "250-400",   quench: "Oil",        notes: "Premium carburizing alloy, aircraft gears." },
       { grade: "52100", category: "Alloy",     normalize: "1625-1700", anneal: "1340-1380", harden: "1525-1550", temper: "300-400",   quench: "Oil",        notes: "Bearing steel; usually spheroidize annealed." },
       { grade: "EN24",  category: "Alloy",     normalize: "1600-1700", anneal: "1450-1500", harden: "1500-1550", temper: "1050-1200", quench: "Oil",        notes: "British 817M40, similar to 4340." },
-      { grade: "EN36",  category: "Alloy",     normalize: "1650",        anneal: "1525-1575", harden: "1450-1500", temper: "300-400",   quench: "Oil",        notes: "Ni-Cr-Mo carburizing, case hardening." },
+      { grade: "EN36",  category: "Alloy",     normalize: "1650",        anneal: "1525-1575", harden: "1450-1500", temper: "300-400",   quench: "Oil",        notes: "Ni-Cr-Mo carburizing for case hardening." },
 
       // ===== Tool steels =====
       { grade: "W1",    category: "Tool",      normalize: "1450-1550", anneal: "1360-1450", harden: "1425-1500", temper: "350-650",   quench: "Water/Brine",notes: "Water-hardening; shallow-hardening." },
       { grade: "W2",    category: "Tool",      normalize: "1450-1550", anneal: "1360-1450", harden: "1425-1500", temper: "300-500",   quench: "Water/Brine",notes: "V-bearing W1 variant; finer grain." },
-      { grade: "O1",    category: "Tool",      normalize: "—",          anneal: "1400-1450", harden: "1450-1500", temper: "350-500",   quench: "Oil",        notes: "Oil-hardening; classic gauge and die." },
-      { grade: "O2",    category: "Tool",      normalize: "—",          anneal: "1375-1450", harden: "1400-1475", temper: "350-500",   quench: "Oil",        notes: "Mn oil-hardening, lower distortion." },
-      { grade: "O6",    category: "Tool",      normalize: "—",          anneal: "1410-1450", harden: "1450-1500", temper: "350-600",   quench: "Oil",        notes: "Graphitic, machinable in hardened state." },
-      { grade: "A2",    category: "Tool",      normalize: "—",          anneal: "1550-1600", harden: "1750-1800", temper: "350-1000",  quench: "Air",        notes: "5% Cr air-hardening, low distortion." },
-      { grade: "A6",    category: "Tool",      normalize: "—",          anneal: "1350-1400", harden: "1525-1600", temper: "300-800",   quench: "Air",        notes: "Lower-temp air-hardening, dimensional stability." },
-      { grade: "D2",    category: "Tool",      normalize: "—",          anneal: "1600-1650", harden: "1825-1875", temper: "400-1000",  quench: "Air",        notes: "High-C high-Cr cold-work die steel." },
-      { grade: "D3",    category: "Tool",      normalize: "—",          anneal: "1650",        harden: "1750-1800", temper: "300-800",   quench: "Oil",        notes: "Higher-C than D2, oil-quenched." },
-      { grade: "S1",    category: "Tool",      normalize: "—",          anneal: "1450-1500", harden: "1650-1750", temper: "400-1200",  quench: "Oil",        notes: "Shock-resisting Cr-W chisel steel." },
-      { grade: "S5",    category: "Tool",      normalize: "—",          anneal: "1425-1475", harden: "1600-1700", temper: "350-800",   quench: "Oil",        notes: "Shock-resisting Si-Mn pneumatic chisels." },
-      { grade: "S7",    category: "Tool",      normalize: "—",          anneal: "1500-1550", harden: "1725-1750", temper: "400-1150",  quench: "Air/Oil",   notes: "Air-hardening shock steel, punches." },
-      { grade: "H11",   category: "Tool",      normalize: "—",          anneal: "1550-1650", harden: "1825-1875", temper: "1000-1150", quench: "Air",        notes: "Hot-work die, double or triple temper." },
-      { grade: "H13",   category: "Tool",      normalize: "—",          anneal: "1550-1650", harden: "1825-1875", temper: "1000-1150", quench: "Air",        notes: "Hot-work die-cast tooling; double temper." },
-      { grade: "H21",   category: "Tool",      normalize: "—",          anneal: "1550-1650", harden: "2000-2200", temper: "1100-1250", quench: "Oil/Air",   notes: "Tungsten hot-work, hot punches." },
-      { grade: "M2",    category: "Tool",      normalize: "—",          anneal: "1550-1600", harden: "2200-2250", temper: "1000-1100", quench: "Oil/Air/Salt",notes: "High-speed; triple temper required." },
-      { grade: "M4",    category: "Tool",      normalize: "—",          anneal: "1600-1650", harden: "2150-2250", temper: "1000-1100", quench: "Oil/Air/Salt",notes: "High-V high-speed for wear apps." },
-      { grade: "M42",   category: "Tool",      normalize: "—",          anneal: "1600",        harden: "2150-2200", temper: "950-1075",  quench: "Oil/Air/Salt",notes: "Cobalt high-speed; high red hardness." },
-      { grade: "T1",    category: "Tool",      normalize: "—",          anneal: "1600",        harden: "2300",        temper: "1000-1100", quench: "Oil/Air/Salt",notes: "Tungsten high-speed (18-4-1)." },
+      { grade: "O1",    category: "Tool",      normalize: "N/A",          anneal: "1400-1450", harden: "1450-1500", temper: "350-500",   quench: "Oil",        notes: "Oil-hardening; classic gauge and die." },
+      { grade: "O2",    category: "Tool",      normalize: "N/A",          anneal: "1375-1450", harden: "1400-1475", temper: "350-500",   quench: "Oil",        notes: "Mn oil-hardening, lower distortion." },
+      { grade: "O6",    category: "Tool",      normalize: "N/A",          anneal: "1410-1450", harden: "1450-1500", temper: "350-600",   quench: "Oil",        notes: "Graphitic, machinable in hardened state." },
+      { grade: "A2",    category: "Tool",      normalize: "N/A",          anneal: "1550-1600", harden: "1750-1800", temper: "350-1000",  quench: "Air",        notes: "5% Cr air-hardening, low distortion." },
+      { grade: "A6",    category: "Tool",      normalize: "N/A",          anneal: "1350-1400", harden: "1525-1600", temper: "300-800",   quench: "Air",        notes: "Lower-temp air-hardening with good dimensional stability." },
+      { grade: "D2",    category: "Tool",      normalize: "N/A",          anneal: "1600-1650", harden: "1825-1875", temper: "400-1000",  quench: "Air",        notes: "High-C high-Cr cold-work die steel." },
+      { grade: "D3",    category: "Tool",      normalize: "N/A",          anneal: "1650",        harden: "1750-1800", temper: "300-800",   quench: "Oil",        notes: "Higher-C than D2, oil-quenched." },
+      { grade: "S1",    category: "Tool",      normalize: "N/A",          anneal: "1450-1500", harden: "1650-1750", temper: "400-1200",  quench: "Oil",        notes: "Shock-resisting Cr-W chisel steel." },
+      { grade: "S5",    category: "Tool",      normalize: "N/A",          anneal: "1425-1475", harden: "1600-1700", temper: "350-800",   quench: "Oil",        notes: "Shock-resisting Si-Mn pneumatic chisels." },
+      { grade: "S7",    category: "Tool",      normalize: "N/A",          anneal: "1500-1550", harden: "1725-1750", temper: "400-1150",  quench: "Air/Oil",   notes: "Air-hardening shock steel for punches." },
+      { grade: "H11",   category: "Tool",      normalize: "N/A",          anneal: "1550-1650", harden: "1825-1875", temper: "1000-1150", quench: "Air",        notes: "Hot-work die; double or triple temper." },
+      { grade: "H13",   category: "Tool",      normalize: "N/A",          anneal: "1550-1650", harden: "1825-1875", temper: "1000-1150", quench: "Air",        notes: "Hot-work die-cast tooling; double temper." },
+      { grade: "H21",   category: "Tool",      normalize: "N/A",          anneal: "1550-1650", harden: "2000-2200", temper: "1100-1250", quench: "Oil/Air",   notes: "Tungsten hot-work and hot punches." },
+      { grade: "M2",    category: "Tool",      normalize: "N/A",          anneal: "1550-1600", harden: "2200-2250", temper: "1000-1100", quench: "Oil/Air/Salt",notes: "High-speed; triple temper required." },
+      { grade: "M4",    category: "Tool",      normalize: "N/A",          anneal: "1600-1650", harden: "2150-2250", temper: "1000-1100", quench: "Oil/Air/Salt",notes: "High-V high-speed for wear apps." },
+      { grade: "M42",   category: "Tool",      normalize: "N/A",          anneal: "1600",        harden: "2150-2200", temper: "950-1075",  quench: "Oil/Air/Salt",notes: "Cobalt high-speed; high red hardness." },
+      { grade: "T1",    category: "Tool",      normalize: "N/A",          anneal: "1600",        harden: "2300",        temper: "1000-1100", quench: "Oil/Air/Salt",notes: "Tungsten high-speed (18-4-1)." },
       { grade: "L6",    category: "Tool",      normalize: "1600-1650", anneal: "1400-1450", harden: "1450-1550", temper: "350-1000",  quench: "Oil",        notes: "Ni-Cr tough oil-hardening; band-saw blades." },
-      { grade: "P20",   category: "Tool",      normalize: "—",          anneal: "1450-1500", harden: "1500-1600", temper: "900-1100",  quench: "Oil",        notes: "Mold steel; usually pre-hardened to 28-32 HRC." },
-      { grade: "CPM-3V",   category: "Tool",   normalize: "—",          anneal: "1600-1650", harden: "1950-2050", temper: "1000-1050", quench: "Air",        notes: "Powder, very high toughness, 58-60 HRC target." },
-      { grade: "CPM-10V",  category: "Tool",   normalize: "—",          anneal: "1600-1650", harden: "2050-2150", temper: "1000-1050", quench: "Air",        notes: "Powder, extreme wear; cold-work tooling." },
-      { grade: "CPM-S30V", category: "Tool",   normalize: "—",          anneal: "1650",        harden: "1950-2075", temper: "400-700",   quench: "Air/Plate", notes: "Powder stainless; premium knife steel." },
-      { grade: "CPM-154",  category: "Tool",   normalize: "—",          anneal: "1650",        harden: "1950-2050", temper: "400-700",   quench: "Air/Plate", notes: "Powder stainless knife steel." },
+      { grade: "P20",   category: "Tool",      normalize: "N/A",          anneal: "1450-1500", harden: "1500-1600", temper: "900-1100",  quench: "Oil",        notes: "Mold steel; usually pre-hardened to 28-32 HRC." },
+      { grade: "CPM-3V",   category: "Tool",   normalize: "N/A",          anneal: "1600-1650", harden: "1950-2050", temper: "1000-1050", quench: "Air",        notes: "Powder steel with very high toughness; 58-60 HRC target." },
+      { grade: "CPM-10V",  category: "Tool",   normalize: "N/A",          anneal: "1600-1650", harden: "2050-2150", temper: "1000-1050", quench: "Air",        notes: "Powder steel with extreme wear resistance for cold-work tooling." },
+      { grade: "CPM-S30V", category: "Tool",   normalize: "N/A",          anneal: "1650",        harden: "1950-2075", temper: "400-700",   quench: "Air/Plate", notes: "Powder stainless; premium knife steel." },
+      { grade: "CPM-154",  category: "Tool",   normalize: "N/A",          anneal: "1650",        harden: "1950-2050", temper: "400-700",   quench: "Air/Plate", notes: "Powder stainless knife steel." },
 
       // ===== Stainless steels =====
-      { grade: "304",     category: "Stainless", normalize: "—", anneal: "1850-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Austenitic; not hardenable by quench." },
-      { grade: "304L",    category: "Stainless", normalize: "—", anneal: "1850-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Low-carbon 304; weld-friendly." },
-      { grade: "316",     category: "Stainless", normalize: "—", anneal: "1900-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Mo-bearing austenitic; marine corrosion." },
-      { grade: "316L",    category: "Stainless", normalize: "—", anneal: "1900-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Low-C 316 for as-welded service." },
-      { grade: "321",     category: "Stainless", normalize: "—", anneal: "1750-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Ti-stabilized austenitic; heat exchangers." },
-      { grade: "347",     category: "Stainless", normalize: "—", anneal: "1850-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Nb-stabilized austenitic." },
-      { grade: "303",     category: "Stainless", normalize: "—", anneal: "1900-2050", harden: "—",          temper: "—",         quench: "Water",      notes: "Free-machining 304; not weldable." },
-      { grade: "430",     category: "Stainless", normalize: "—", anneal: "1400-1500", harden: "—",          temper: "—",         quench: "Air",        notes: "Ferritic; not quench-hardenable." },
-      { grade: "446",     category: "Stainless", normalize: "—", anneal: "1500-1650", harden: "—",          temper: "—",         quench: "Air",        notes: "High-Cr ferritic; high-temp resistance." },
-      { grade: "410",     category: "Stainless", normalize: "—", anneal: "1500-1650", harden: "1750-1850", temper: "400-1100",  quench: "Air/Oil",   notes: "Martensitic; cutlery, valves." },
-      { grade: "416",     category: "Stainless", normalize: "—", anneal: "1500-1650", harden: "1700-1850", temper: "400-1200",  quench: "Oil",        notes: "Free-machining 410; shafts." },
-      { grade: "420",     category: "Stainless", normalize: "—", anneal: "1550-1650", harden: "1825-1875", temper: "300-700",   quench: "Air/Oil",   notes: "Cutlery and dental tools." },
-      { grade: "420HC",   category: "Stainless", normalize: "—", anneal: "1550-1650", harden: "1875-1925", temper: "300-500",   quench: "Air/Oil",   notes: "High-carbon 420; production knife blades." },
-      { grade: "440A",    category: "Stainless", normalize: "—", anneal: "1550-1650", harden: "1850-1950", temper: "300-800",   quench: "Air/Oil",   notes: "Martensitic stainless, lower carbide." },
-      { grade: "440B",    category: "Stainless", normalize: "—", anneal: "1550-1650", harden: "1850-1950", temper: "300-800",   quench: "Air/Oil",   notes: "Mid-tier 440-series cutlery stainless." },
-      { grade: "440C",    category: "Stainless", normalize: "—", anneal: "1550-1650", harden: "1850-1950", temper: "300-800",   quench: "Air/Oil",   notes: "High-C high-Cr; bearings, blades. Avoid 800-1100°F temper." },
-      { grade: "17-4 PH", category: "Stainless", normalize: "—", anneal: "1900",        harden: "—",          temper: "900-1150",  quench: "Air",        notes: "PH stainless; H900 to H1150 conditions." },
-      { grade: "15-5 PH", category: "Stainless", normalize: "—", anneal: "1900",        harden: "—",          temper: "900-1150",  quench: "Air",        notes: "Similar to 17-4 with better transverse properties." },
-      { grade: "13-8 PH", category: "Stainless", normalize: "—", anneal: "1700",        harden: "—",          temper: "950-1100",  quench: "Air",        notes: "PH; aerospace structural fittings." },
-      { grade: "17-7 PH", category: "Stainless", normalize: "—", anneal: "1950",        harden: "1400-1750", temper: "950-1050",  quench: "Air",        notes: "Multi-step (Cond A → TH or RH); springs." },
-      { grade: "A286",    category: "Stainless", normalize: "—", anneal: "1800",        harden: "—",          temper: "1325",        quench: "Oil/Water", notes: "Austenitic age-hardening superalloy." },
-      { grade: "Custom 455", category: "Stainless", normalize: "—", anneal: "1525",     harden: "—",          temper: "900-1050",  quench: "Air",        notes: "PH stainless; high strength + corrosion resistance." }
+      { grade: "304",     category: "Stainless", normalize: "N/A", anneal: "1850-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Austenitic; not hardenable by quench." },
+      { grade: "304L",    category: "Stainless", normalize: "N/A", anneal: "1850-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Low-carbon 304; weld-friendly." },
+      { grade: "316",     category: "Stainless", normalize: "N/A", anneal: "1900-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Mo-bearing austenitic; marine corrosion." },
+      { grade: "316L",    category: "Stainless", normalize: "N/A", anneal: "1900-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Low-C 316 for as-welded service." },
+      { grade: "321",     category: "Stainless", normalize: "N/A", anneal: "1750-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Ti-stabilized austenitic; heat exchangers." },
+      { grade: "347",     category: "Stainless", normalize: "N/A", anneal: "1850-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Nb-stabilized austenitic." },
+      { grade: "303",     category: "Stainless", normalize: "N/A", anneal: "1900-2050", harden: "N/A",          temper: "N/A",         quench: "Water",      notes: "Free-machining 304; not weldable." },
+      { grade: "430",     category: "Stainless", normalize: "N/A", anneal: "1400-1500", harden: "N/A",          temper: "N/A",         quench: "Air",        notes: "Ferritic; not quench-hardenable." },
+      { grade: "446",     category: "Stainless", normalize: "N/A", anneal: "1500-1650", harden: "N/A",          temper: "N/A",         quench: "Air",        notes: "High-Cr ferritic; high-temp resistance." },
+      { grade: "410",     category: "Stainless", normalize: "N/A", anneal: "1500-1650", harden: "1750-1850", temper: "400-1100",  quench: "Air/Oil",   notes: "Martensitic; cutlery and valves." },
+      { grade: "416",     category: "Stainless", normalize: "N/A", anneal: "1500-1650", harden: "1700-1850", temper: "400-1200",  quench: "Oil",        notes: "Free-machining 410; shafts." },
+      { grade: "420",     category: "Stainless", normalize: "N/A", anneal: "1550-1650", harden: "1825-1875", temper: "300-700",   quench: "Air/Oil",   notes: "Cutlery and dental tools." },
+      { grade: "420HC",   category: "Stainless", normalize: "N/A", anneal: "1550-1650", harden: "1875-1925", temper: "300-500",   quench: "Air/Oil",   notes: "High-carbon 420; production knife blades." },
+      { grade: "440A",    category: "Stainless", normalize: "N/A", anneal: "1550-1650", harden: "1850-1950", temper: "300-800",   quench: "Air/Oil",   notes: "Martensitic stainless, lower carbide." },
+      { grade: "440B",    category: "Stainless", normalize: "N/A", anneal: "1550-1650", harden: "1850-1950", temper: "300-800",   quench: "Air/Oil",   notes: "Mid-tier 440-series cutlery stainless." },
+      { grade: "440C",    category: "Stainless", normalize: "N/A", anneal: "1550-1650", harden: "1850-1950", temper: "300-800",   quench: "Air/Oil",   notes: "High-C high-Cr; bearings and blades. Avoid 800-1100°F temper." },
+      { grade: "17-4 PH", category: "Stainless", normalize: "N/A", anneal: "1900",        harden: "N/A",          temper: "900-1150",  quench: "Air",        notes: "PH stainless; H900 to H1150 conditions." },
+      { grade: "15-5 PH", category: "Stainless", normalize: "N/A", anneal: "1900",        harden: "N/A",          temper: "900-1150",  quench: "Air",        notes: "Similar to 17-4 with better transverse properties." },
+      { grade: "13-8 PH", category: "Stainless", normalize: "N/A", anneal: "1700",        harden: "N/A",          temper: "950-1100",  quench: "Air",        notes: "PH; aerospace structural fittings." },
+      { grade: "17-7 PH", category: "Stainless", normalize: "N/A", anneal: "1950",        harden: "1400-1750", temper: "950-1050",  quench: "Air",        notes: "Multi-step (Cond A → TH or RH); springs." },
+      { grade: "A286",    category: "Stainless", normalize: "N/A", anneal: "1800",        harden: "N/A",          temper: "1325",        quench: "Oil/Water", notes: "Austenitic age-hardening superalloy." },
+      { grade: "Custom 455", category: "Stainless", normalize: "N/A", anneal: "1525",     harden: "N/A",          temper: "900-1050",  quench: "Air",        notes: "PH stainless; high strength + corrosion resistance." }
     ];
 
     const tagClass = (cat) => ({
@@ -912,7 +912,7 @@
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     }[c]));
 
-    // Extract leading number for numeric sorting of range strings like "1525-1575" or "—".
+    // Extract leading number for numeric sorting of range strings like "1525-1575" or "N/A".
     const sortValue = (val) => {
       if (val == null) return Number.POSITIVE_INFINITY;
       const m = String(val).match(/-?\d+(\.\d+)?/);
