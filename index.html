@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopFloorCalc — Free Calculators for Tradespeople and Engineers</title>
+  <meta name="description" content="Free professional calculators and reference tools for tradespeople and engineers. Metalworking, welding, HVAC, plumbing, and electrical calculations.">
+  <link rel="canonical" href="https://shopfloorcalc.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-665NM03G4M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-665NM03G4M');
+  </script>
+
+  <style>
+    :root {
+      --color-bg: #f8f9fa;
+      --color-surface: #ffffff;
+      --color-text: #1a1d23;
+      --color-text-secondary: #5a6069;
+      --color-border: #d1d5db;
+
+      --color-header-bg: #111318;
+      --color-header-text: #f0f1f3;
+
+      --color-accent: #2563eb;
+      --color-accent-hover: #1d4ed8;
+      --color-accent-light: #dbeafe;
+      --color-accent-subtle: #eff6ff;
+
+      --color-success: #16a34a;
+      --color-warning: #d97706;
+      --color-error: #dc2626;
+
+      --color-table-header-bg: #1e2028;
+      --color-table-header-text: #f0f1f3;
+      --color-table-row-alt: #f1f3f5;
+      --color-table-hover: #e8ecf0;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-lg: 0 4px 16px rgba(0,0,0,0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--color-text);
+      margin: 0 0 16px 0;
+    }
+
+    a { color: var(--color-accent); text-decoration: none; }
+    a:hover { color: var(--color-accent-hover); text-decoration: underline; }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-header-bg);
+      color: var(--color-header-text);
+      height: 56px;
+      box-shadow: var(--shadow-md);
+    }
+    .site-header-inner {
+      max-width: 960px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-brand {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--color-header-text);
+      letter-spacing: -0.01em;
+    }
+    .site-brand:hover { color: var(--color-header-text); text-decoration: none; }
+    .site-nav { display: flex; gap: 24px; }
+    .site-nav a {
+      color: var(--color-header-text);
+      font-size: 15px;
+      font-weight: 500;
+      opacity: 0.85;
+      transition: opacity 0.15s ease;
+    }
+    .site-nav a:hover { opacity: 1; text-decoration: none; }
+
+    /* Main content wrapper */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    @media (max-width: 640px) {
+      main { padding: 24px 24px 48px; }
+      .site-header-inner { padding: 0 16px; }
+      .site-nav { gap: 16px; }
+    }
+
+    /* Homepage hero */
+    .hero {
+      margin-bottom: 40px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .hero p.intro {
+      font-size: 18px;
+      color: var(--color-text-secondary);
+      max-width: 720px;
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 28px; }
+      .hero p.intro { font-size: 16px; }
+    }
+
+    /* Category section */
+    .category {
+      margin-bottom: 48px;
+    }
+    .category-heading {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-secondary);
+      margin: 0 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Card grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .card-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+
+    .tool-card {
+      display: block;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      color: var(--color-text);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .tool-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+      text-decoration: none;
+      color: var(--color-text);
+    }
+    .tool-card-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin: 0 0 6px 0;
+      line-height: 1.3;
+    }
+    .tool-card:hover .tool-card-title { color: var(--color-accent-hover); }
+    .tool-card-desc {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+    }
+    .tool-card-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+      background: var(--color-accent-subtle);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #f1f3f5;
+      border-top: 1px solid var(--color-border);
+      padding: 32px 24px;
+      margin-top: 32px;
+    }
+    .site-footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+    .site-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+    .site-footer-links a {
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+    .site-footer-links a:hover { color: var(--color-accent); text-decoration: none; }
+    .site-footer-disclaimer {
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 720px;
+    }
+    .site-footer-copyright {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-brand">ShopFloorCalc</a>
+      <nav class="site-nav">
+        <a href="/">Tools</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>ShopFloorCalc</h1>
+      <p class="intro">Free professional calculators and reference tools for tradespeople and engineers.</p>
+    </section>
+
+    <section class="category">
+      <h2 class="category-heading">Metalworking</h2>
+      <div class="card-grid">
+        <a href="/heat-treat/" class="tool-card">
+          <h3 class="tool-card-title">Heat Treat Temperature Guide</h3>
+          <p class="tool-card-desc">Hardening, tempering, and annealing temperatures for common tool and alloy steels.</p>
+          <span class="tool-card-tag">Metalworking</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <p class="site-footer-disclaimer">
+        These values are general guidelines from published industry references. Always verify with manufacturer specifications for your specific application.
+      </p>
+      <p class="site-footer-copyright">&copy; 2026 ShopFloorCalc</p>
+    </div>
+  </footer>
+
+</body>
+</html>

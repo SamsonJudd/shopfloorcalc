@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '/<!-- Supporting content -->/,/<\\\\/main>/' \"c:/Users/samso/OneDrive/Desktop/Projects/shopfloorcalc/heat-treat/index.html\")"
+    ]
+  }
+}
