@@ -271,6 +271,30 @@
       text-align: right;
     }
 
+    .show-more-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    .show-more-btn {
+      height: 38px;
+      padding: 0 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-accent);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .show-more-btn:hover {
+      background: var(--color-accent-subtle);
+      border-color: var(--color-accent);
+      color: var(--color-accent-hover);
+    }
+
     /* Table — fits desktop in container; horizontal scroll only on tablet/mobile */
     .table-wrapper {
       border: 1px solid var(--color-border);
@@ -618,6 +642,9 @@
           <tbody id="table-body"></tbody>
         </table>
       </div>
+      <div class="show-more-row" id="show-more-row" style="display:none;">
+        <button type="button" class="show-more-btn" id="show-more-btn"></button>
+      </div>
       <p class="unit-note">All temperatures in &deg;F</p>
       <div class="empty-state" id="empty-state" style="display:none;">
         No alloys match your search. Try clearing the filter or simplifying the search term.
@@ -921,11 +948,14 @@
 
     const numericKeys = new Set(["normalize", "anneal", "harden", "temper"]);
 
+    const INITIAL_LIMIT = 15;
+
     const state = {
       search: "",
       category: "all",
       sortKey: "grade",
-      sortDir: "asc"
+      sortDir: "asc",
+      showAll: false
     };
 
     const $body = document.getElementById("table-body");
@@ -933,6 +963,8 @@
     const $sortStatus = document.getElementById("sort-status");
     const $empty = document.getElementById("empty-state");
     const $table = document.getElementById("alloy-table");
+    const $showMoreRow = document.getElementById("show-more-row");
+    const $showMoreBtn = document.getElementById("show-more-btn");
 
     function getFiltered() {
       const q = state.search.trim().toLowerCase();
@@ -966,16 +998,22 @@
       });
     }
 
+    function shouldCap() {
+      return !state.showAll && state.search.trim() === "" && state.category === "all";
+    }
+
     function render() {
       const filtered = getFiltered();
       const sorted = getSorted(filtered);
+      const capped = shouldCap() && sorted.length > INITIAL_LIMIT;
+      const visible = capped ? sorted.slice(0, INITIAL_LIMIT) : sorted;
 
       if (sorted.length === 0) {
         $body.innerHTML = "";
         $empty.style.display = "block";
       } else {
         $empty.style.display = "none";
-        $body.innerHTML = sorted.map(a => `
+        $body.innerHTML = visible.map(a => `
           <tr>
             <td class="grade">${escapeHTML(a.grade)}</td>
             <td><span class="tag ${tagClass(a.category)}">${escapeHTML(a.category)}</span></td>
@@ -990,9 +1028,16 @@
       }
 
       const total = ALLOYS.length;
-      $count.textContent = sorted.length === total
-        ? `Showing all ${total} alloys`
-        : `Showing ${sorted.length} of ${total} alloys`;
+      if (capped) {
+        $count.textContent = `Showing ${visible.length} of ${total} alloys`;
+        $showMoreRow.style.display = "flex";
+        $showMoreBtn.textContent = `Show all ${total} alloys`;
+      } else {
+        $showMoreRow.style.display = "none";
+        $count.textContent = sorted.length === total
+          ? `Showing all ${total} alloys`
+          : `Showing ${sorted.length} of ${total} alloys`;
+      }
 
       const headers = $table.querySelectorAll("thead th");
       headers.forEach(th => {
@@ -1027,6 +1072,7 @@
         document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         state.category = btn.dataset.filter;
+        state.showAll = false;
         render();
       });
     });
@@ -1043,6 +1089,12 @@
         }
         render();
       });
+    });
+
+    // Show all
+    $showMoreBtn.addEventListener("click", () => {
+      state.showAll = true;
+      render();
     });
 
     render();
